@@ -12,7 +12,7 @@ def news_scrape(company):
 		"http://www.techradar.com/us/pro"]
 
 	total = 0
-	count = 0
+	count = 1
 
 	for w in weblist:
 		r = urllib.urlopen(w).read()
@@ -26,10 +26,11 @@ def news_scrape(company):
 			total = total + 1
 			if x.lower() == company:
 				count = count + 1
-
+	count = float(count)
+	count = count/100
 	return count
 
-
+#converting to visbile text
 def visible(element):
     if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
         return False

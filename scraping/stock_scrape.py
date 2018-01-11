@@ -11,5 +11,7 @@ def stock_scrape(stockid):
 	stock = soup.find('span', id="yfs_l84_" + stockid.lower())
 	stock = stock.text
 	stock = float(stock)
+	stock = stock/50
+	stock = round(stock,4)
 
 	return stock

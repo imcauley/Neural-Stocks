@@ -1,7 +1,6 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-import simplejson as json
 
 def aluminium_scrape():
 	r = requests.get("http://www.indexmundi.com/commodities/?commodity=aluminum")
@@ -12,7 +11,12 @@ def aluminium_scrape():
 	for child in future.children:
 		array.append(child)
 
-	al =  float(array[3].text)
+	al = array[3].text
+	al = al.replace(",", "")
+	al = float(al)
+	al = al/3070
+	al = round(al, 4)
+
 	return al
 
 def gas_scrape():
@@ -24,7 +28,12 @@ def gas_scrape():
 	for child in future.children:
 		array.append(child)
 
-	gas =  float(array[3].text)
+	gas = array[3].text
+	gas = gas.replace(",", "")
+	gas = float(gas)
+	gas = gas/5.98
+	gas = round(gas, 4)
+
 	return gas
 
 def copper_scrape():
@@ -32,24 +41,13 @@ def copper_scrape():
 	soup = BeautifulSoup(r.text, "lxml")
 	future = soup.find('div', id="futuresPanel")
 	array = []
-	total = 0
 	for child in future.children:
 		array.append(child)
 
-	cu =  array[3].text
-	''.join(c for c in cu if c.isdigit())
+	cu = array[3].text
+	cu = cu.replace(",", "")
 	cu = float(cu)
+	cu = cu/9880
+	cu = round(cu, 4)
 	
 	return cu
-
-def oil_scrape():
-	r = requests.get("http://www.indexmundi.com/commodities/?commodity=crude-oil-brent")
-	soup = BeautifulSoup(r.text, "lxml")
-	future = soup.find('div', id="futuresPanel")
-	array = []
-	total = 0
-	for child in future.children:
-		array.append(child)
-
-	oil =  float(array[3].text)
-	return oil
