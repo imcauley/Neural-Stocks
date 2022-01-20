@@ -3,7 +3,7 @@ import os
 
 #used to see what dates have full data
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 
 date = open(os.path.join(filepath, "date.json"), "r")
 date = date.read() 

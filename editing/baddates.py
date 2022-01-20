@@ -2,7 +2,7 @@ import os
 
 #used to delete dates that dont have full data
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 files = ["date", "time", "intelstock", "amdstock", "nvdastock", "intelnews", "amdnews", "nvdanews", "al", "cu", "gas", "eur", "gbp", "cny"]
 
 date = open(os.path.join(filepath, "date.json"), "r")

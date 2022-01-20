@@ -156,7 +156,7 @@ def export():
     maximum = 2500
     trial = "1"
 
-    #filename = "/home/isaac/Desktop/NeuralStocksMaster/predictions/" \
+    #filename = "/Users/marcojanker/development/Neural-Stocks/predictions/" \
     #                            + day + "-" + str(offset) + "-" + str(nodes) + "-" + str(maximum) + "-" + trial
     #predict = open(os.path.join(filename + ".json"), "w")
     #predict.write(export)

@@ -18,7 +18,7 @@ def tick():
 
 	if 0.375 < checktime < 0.625: 
 
-		filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+		filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 
 		time = open(os.path.join(filepath, "time.json"), "a")
 		time.write(", " + json.dumps(gt.get_time()))

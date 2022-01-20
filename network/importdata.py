@@ -1,7 +1,7 @@
 import numpy as np
 import os
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 files = ["date", "time", "intelstock", "amdstock", "nvdastock", "intelnews", "amdnews", "nvdanews", "al", "cu", "gas", "eur", "gbp", "cny"]
 
 
