@@ -3,7 +3,7 @@ import os
 
 #used for graphing
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 
 openfile = open(os.path.join(filepath, "intelstock.json"), "r")
 openfile = openfile.read() 

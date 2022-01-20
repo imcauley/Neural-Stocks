@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import os
 import numpy as np
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
-filepath2 = "/home/isaac/Desktop/NeuralStocksMaster/predictions/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
+filepath2 = "/Users/marcojanker/development/Neural-Stocks/predictions/"
 
 #open actual stock
 openfile = open(os.path.join(filepath, "intelstock.json"), "r")

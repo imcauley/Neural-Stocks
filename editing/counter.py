@@ -2,7 +2,7 @@ import os
 
 #used to see how many data points each file has
 
-filepath = "/home/isaac/Desktop/NeuralStocksMaster/data/"
+filepath = "/Users/marcojanker/development/Neural-Stocks/data/"
 files = ["date", "time", "intelstock", "amdstock", "nvdastock", "intelnews", "amdnews", "nvdanews", "al", "cu", "gas", "eur", "gbp", "cny"]
 
 for f in files:
